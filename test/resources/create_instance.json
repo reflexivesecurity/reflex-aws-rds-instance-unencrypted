@@ -1,0 +1,176 @@
+{
+    "version": "0",
+    "id": "9fff6292-a6fe-8108-cc93-108b562accbf",
+    "detail-type": "AWS API Call via CloudTrail",
+    "source": "aws.rds",
+    "account": "000000000000",
+    "time": "2020-03-19T01:18:33Z",
+    "region": "us-east-1",
+    "resources": [],
+    "detail": {
+        "eventVersion": "1.05",
+        "userIdentity": {
+            "type": "IAMUser",
+            "principalId": "AIDASGGGG76G5SSJD2GGF",
+            "arn": "arn:aws:iam::000000000000:user/richard.julian.pangolock",
+            "accountId": "000000000000",
+            "accessKeyId": "ASIAGGGGGGGGGGGGGGGG",
+            "userName": "example.user",
+            "sessionContext": {
+                "attributes": {
+                    "mfaAuthenticated": "true",
+                    "creationDate": "2020-03-18T22:24:53Z"
+                }
+            },
+            "invokedBy": "signin.amazonaws.com"
+        },
+        "eventTime": "2020-03-19T01:18:33Z",
+        "eventSource": "rds.amazonaws.com",
+        "eventName": "CreateDBInstance",
+        "awsRegion": "us-east-1",
+        "sourceIPAddress": "127.0.0.1",
+        "userAgent": "signin.amazonaws.com",
+        "requestParameters": {
+            "dBName": "",
+            "dBInstanceIdentifier": "database-1",
+            "allocatedStorage": 20,
+            "dBInstanceClass": "db.t2.micro",
+            "engine": "postgres",
+            "masterUsername": "postgres",
+            "masterUserPassword": "****",
+            "vpcSecurityGroupIds": [
+                "sg-d3cca681"
+            ],
+            "dBSubnetGroupName": "default-vpc-00000000",
+            "dBParameterGroupName": "default.postgres11",
+            "backupRetentionPeriod": 7,
+            "port": 5432,
+            "multiAZ": false,
+            "engineVersion": "11.5",
+            "autoMinorVersionUpgrade": true,
+            "optionGroupName": "default:postgres-11",
+            "publiclyAccessible": false,
+            "storageType": "gp2",
+            "storageEncrypted": false,
+            "copyTagsToSnapshot": true,
+            "enableIAMDatabaseAuthentication": false,
+            "enablePerformanceInsights": false,
+            "enableCloudwatchLogsExports": [],
+            "deletionProtection": false,
+            "maxAllocatedStorage": 1000
+        },
+        "responseElements": {
+            "dBInstanceIdentifier": "database-1",
+            "dBInstanceClass": "db.t2.micro",
+            "engine": "postgres",
+            "dBInstanceStatus": "creating",
+            "masterUsername": "postgres",
+            "allocatedStorage": 20,
+            "preferredBackupWindow": "04:06-04:36",
+            "backupRetentionPeriod": 7,
+            "dBSecurityGroups": [],
+            "vpcSecurityGroups": [
+                {
+                    "vpcSecurityGroupId": "sg-d3cca681",
+                    "status": "active"
+                }
+            ],
+            "dBParameterGroups": [
+                {
+                    "dBParameterGroupName": "default.postgres11",
+                    "parameterApplyStatus": "in-sync"
+                }
+            ],
+            "dBSubnetGroup": {
+                "dBSubnetGroupName": "default-vpc-00000000",
+                "dBSubnetGroupDescription": "Created from the RDS Management Console",
+                "vpcId": "vpc-00000000",
+                "subnetGroupStatus": "Complete",
+                "subnets": [
+                    {
+                        "subnetIdentifier": "subnet-00000000",
+                        "subnetAvailabilityZone": {
+                            "name": "us-east-1d"
+                        },
+                        "subnetOutpost": {},
+                        "subnetStatus": "Active"
+                    },
+                    {
+                        "subnetIdentifier": "subnet-00000000",
+                        "subnetAvailabilityZone": {
+                            "name": "us-east-1a"
+                        },
+                        "subnetOutpost": {},
+                        "subnetStatus": "Active"
+                    },
+                    {
+                        "subnetIdentifier": "subnet-00000000",
+                        "subnetAvailabilityZone": {
+                            "name": "us-east-1e"
+                        },
+                        "subnetOutpost": {},
+                        "subnetStatus": "Active"
+                    },
+                    {
+                        "subnetIdentifier": "subnet-00000000",
+                        "subnetAvailabilityZone": {
+                            "name": "us-east-1b"
+                        },
+                        "subnetOutpost": {},
+                        "subnetStatus": "Active"
+                    },
+                    {
+                        "subnetIdentifier": "subnet-00000000",
+                        "subnetAvailabilityZone": {
+                            "name": "us-east-1f"
+                        },
+                        "subnetOutpost": {},
+                        "subnetStatus": "Active"
+                    },
+                    {
+                        "subnetIdentifier": "subnet-000000000,
+                        "subnetAvailabilityZone": {
+                            "name": "us-east-1c"
+                        },
+                        "subnetOutpost": {},
+                        "subnetStatus": "Active"
+                    }
+                ]
+            },
+            "preferredMaintenanceWindow": "wed:04:41-wed:05:11",
+            "pendingModifiedValues": {
+                "masterUserPassword": "****"
+            },
+            "multiAZ": false,
+            "engineVersion": "11.5",
+            "autoMinorVersionUpgrade": true,
+            "readReplicaDBInstanceIdentifiers": [],
+            "licenseModel": "postgresql-license",
+            "optionGroupMemberships": [
+                {
+                    "optionGroupName": "default:postgres-11",
+                    "status": "in-sync"
+                }
+            ],
+            "publiclyAccessible": false,
+            "storageType": "gp2",
+            "dbInstancePort": 0,
+            "storageEncrypted": false,
+            "dbiResourceId": "db-DSNZGKFFFFFFFFFFFFFFFFFFFF",
+            "cACertificateIdentifier": "rds-ca-2019",
+            "domainMemberships": [],
+            "copyTagsToSnapshot": true,
+            "monitoringInterval": 0,
+            "dBInstanceArn": "arn:aws:rds:us-east-1:000000000000:db:database-1",
+            "iAMDatabaseAuthenticationEnabled": false,
+            "performanceInsightsEnabled": false,
+            "deletionProtection": false,
+            "associatedRoles": [],
+            "httpEndpointEnabled": false,
+            "maxAllocatedStorage": 1000
+        },
+        "requestID": "ffffff-220c-4b9b-8f12-7033aa855b46",
+        "eventID": "54afffff-5e74-426a-b8b9-b700f208ea1b",
+        "eventType": "AwsApiCall"
+    }
+}
