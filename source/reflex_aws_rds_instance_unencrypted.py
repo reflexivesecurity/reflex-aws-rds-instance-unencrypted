@@ -16,7 +16,7 @@ class RDSInstanceUnencrypted(AWSRule):
     def extract_event_data(self, event):
         """ Extract required event data """
         self.instance_id = event["detail"]["requestParameters"]["dBInstanceIdentifier"]
-        self.instance_encrypted = event["detail"]["requestParameters"]["storageEncrypted"]
+        self.instance_encrypted = event["detail"]["responseElements"]["storageEncrypted"]
 
     def resource_compliant(self):
         """
