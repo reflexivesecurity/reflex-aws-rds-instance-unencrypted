@@ -1,5 +1,5 @@
 module "reflex_aws_rds_instance_unencrypted" {
-  source           = "git::https://github.com/cloudmitigator/reflex-engine.git//modules/cwe_lambda?ref=v0.5.4"
+  source           = "git::https://github.com/cloudmitigator/reflex-engine.git//modules/cwe_lambda?ref=v0.5.7"
   rule_name        = "RDSInstanceUnencrypted"
   rule_description = "Rule to detect with an RDS instance is created unencrypted."
 
