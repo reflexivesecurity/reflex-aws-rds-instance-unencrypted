@@ -16,7 +16,9 @@ class RDSInstanceUnencrypted(AWSRule):
     def extract_event_data(self, event):
         """ Extract required event data """
         self.instance_id = event["detail"]["requestParameters"]["dBInstanceIdentifier"]
-        self.instance_encrypted = event["detail"]["responseElements"]["storageEncrypted"]
+        self.instance_encrypted = event["detail"]["responseElements"][
+            "storageEncrypted"
+        ]
 
     def resource_compliant(self):
         """
@@ -34,8 +36,9 @@ class RDSInstanceUnencrypted(AWSRule):
 def lambda_handler(event, _):
     """ Handles the incoming event """
     print(event)
-    if subscription_confirmation.is_subscription_confirmation(event):
-        subscription_confirmation.confirm_subscription(event)
+    event_payload = json.loads(event["Records"][0]["body"])
+    if subscription_confirmation.is_subscription_confirmation(event_payload):
+        subscription_confirmation.confirm_subscription(event_payload)
         return
-    rule = RDSInstanceUnencrypted(json.loads(event["Records"][0]["body"]))
+    rule = RDSInstanceUnencrypted(event_payload)
     rule.run_compliance_rule()
